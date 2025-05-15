@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <include name="upstream.xml"/>
+  <include name="custom/upstream.xml"/>
 
   <remote fetch="https://github.com/intel-innersource/" name="origin" review="https://github.com/intel-innersource"/>
 
