@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="upstream.xml"/>
+
+  <remote fetch="https://github.com/intel-innersource/" name="origin" review="https://github.com/intel-innersource"/>
+
+  <default remote="origin" revision="main"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** Repository for the repo tool                                                                               -->
+  <project name="applications.automotive.configuration.manifest" path="manifest" revision="andersonlake/dev"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** Repository from TSD                                                                                        -->
+  <project name="os.linux.yocto.meta-ias-devtools" path="meta-ias-devtools"/>
+  <project name="os.linux.yocto.meta-ias-core" path="meta-ias-core"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** Vulcan integration                                                                                         -->
+  <project name="os.linux.yocto.meta-intel-integration" path="meta-intel-integration">
+    <linkfile dest="obb_build.sh" src="scripts/obb_build.sh"/>
+  </project>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** AndersonLake BSP & program specific repositories                                                             -->
+  <project name="os.linux.yocto.meta-andersonlake" path="meta-andersonlake"/>
+  <project name="os.linux.yocto.meta-andersonlake-bsp" path="meta-andersonlake-bsp"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** Local layer for OS layers                                                                                  -->
+  <project name="os.linux.yocto.meta-wr-oss" path="meta-wr-oss"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** SDK configration and test layers                                                                           -->
+  <project name="os.linux.yocto.halo-meta-intel-sdk2" path="meta-intel-sdk"/>
+  <project name="os.linux.yocto.meta-wr-sdk-tests" path="meta-wr-sdk-tests"/>
+
+  <!-- ************************************************************************************************************** -->
+  <!-- *** AndersonLake project build configuration                                                                 -->
+  <project name="os.linux.yocto.prj-andersonlake" path="prj-andersonlake">
+    <linkfile dest="setup-environment" src="setup-environment-alm-64-uefi"/>
+    <linkfile dest="setup-environment-abl" src="setup-environment-alm-64-abl"/>
+    <linkfile dest="setup-environment-abl-elk" src="setup-environment-alm-64-abl-elk"/>
+    <linkfile dest="setup-environment-ots-abl" src="setup-environment-alm-ots-64-abl"/>
+    <linkfile dest="setup-environment-ots-abl-elk" src="setup-environment-alm-ots-64-abl-elk"/>
+  </project>
+
+</manifest>
