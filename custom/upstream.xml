@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+A repo manifest file template containing all upstream GIT repos / Yocto layers
+bound to the correct commits to be used within this project.
+
+For further information on how to use repo, please see:
+https://code.google.com/p/git-repo/
+http://source.android.com/source/using-repo.html
+-->
+
+<manifest>
+	<remote name="yoctoproject" fetch="https://git.yoctoproject.org/git"/>
+
+	<remote name="openembedded" fetch="https://git.openembedded.org"/>
+
+        <!-- Base distribution -->
+	<project name="poky" remote="yoctoproject" revision="387ab5f18b17c3af3e9e30dc58584641a70f359f"/> <!-- TAG: tag: yocto-4.0.3, tag: kirkstone-4.0.3 -->
+        <project name="meta-openembedded" remote="openembedded" revision="acbe74879807fc6f82b62525d32c823899e19036"/> <!-- branch: kirkstone-->
+
+        <!-- BSPs -->
+        <project name="meta-intel" remote="yoctoproject" revision="15cdda250fc5aa762ac0139087f96411ca696036"/> <!-- branch: kirkstone -->
+
+	<!-- SELinux -->
+	<project name="meta-selinux" remote="yoctoproject" revision="a401f4b2816a0b41ce8d9351542658c721935bcd"/> <!-- branch: kirkstone -->
+</manifest>
