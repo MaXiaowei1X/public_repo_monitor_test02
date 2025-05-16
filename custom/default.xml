@@ -7,7 +7,6 @@
 
   <!-- ************************************************************************************************************** -->
   <!-- *** Repository for the repo tool                                                                               -->
-  
-  <!-- *** <project name="public_repo_monitor_test02" path="manifest" />                                                                -->
+  <project name="public_repo_monitor_test02" path="POLLING" />
 
 </manifest>
