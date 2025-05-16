@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <include name="custom/upstream.xml"/>
-
+  <!-- *** <project name="public_repo_monitor_test02" path="manifest" />                                                                              -->  
   <remote fetch="https://github.com/MaXiaowei1X/" name="origin" review="https://github.com/MaXiaowei1X"/>
 
   <default remote="origin" revision="main"/>
